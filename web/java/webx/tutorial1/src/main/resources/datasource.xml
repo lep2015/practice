@@ -33,7 +33,7 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
     <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="mapperInterface" value="com.alibaba.webx.tutorial1.app1.mapper.VisitorMapper" />
+        <property name="mapperInterface" value="com.alibaba.webx.tutorial1.mapper.VisitorMapper" />
         <property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
 </beans>

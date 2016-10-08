@@ -20,6 +20,8 @@ package com.alibaba.webx.tutorial1.app1.module.action;
 import com.alibaba.citrus.turbine.Navigator;
 import com.alibaba.citrus.turbine.dataresolver.FormGroup;
 
+import com.alibaba.webx.tutorial1.app1.Visitor;
+import com.alibaba.webx.tutorial1.mapper.VisitorMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class RegisterAction {
@@ -28,7 +30,7 @@ public class RegisterAction {
 
     public void doRegister(@FormGroup("register") Visitor visitor, Navigator nav) {
         String name = visitor.getName();
-        Visitor dbVisitor = this.visitorMapper.getVisitor("1");
+        Visitor dbVisitor = this.visitorMapper.selectByPrimaryKey(1);
         nav.redirectTo("app1Link").withTarget("form/welcome").withParameter("name", dbVisitor.getName());
     }
 }
