@@ -6,6 +6,8 @@ target
 .svn
 
 *.iml
+*.iws
+*.ipr
 /out
 /.idea/ant.xml
 /.idea/misc.xml
