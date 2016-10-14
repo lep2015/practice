@@ -1,0 +1,5 @@
+# IoC
+BeanFactory：容器的基本接口，是一个工厂
+FactoryBean：是一个特殊的Bean，可以当作工厂使用的Bean
+	- 这个Bean特殊在哪儿：所有的Bean都是通过getBean等方法得到的，这个也是，只不过在获取这个Bean的时候会判断，如果没实现了FactoryBean这个接口的就直接返回从容器中返回的instance，如果是实现了该接口则会调用getObjectFromFactoryBean进一步获取
+	
