@@ -1,0 +1,6 @@
+## web环境中的IoC容器启动
+- spring容器的入口：ContextLoaderListener
+- spring MVC的入口：DispatcherServlet
+
+## DispatcherServlet初始化
+在IoC容器启动完成之后，FrameworkServlet（dispatchServlet的父类）有一个内部类ContextRefreshListener实现了ApplicationListener<ContextRefreshedEvent>接口的onApplicationEvent方法，在里面调用了FrameworkServlet.this.onApplicationEvent(event)->DispatcherServlet.onRefresh->DispatcherServlet.initStrategies
